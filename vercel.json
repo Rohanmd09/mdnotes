@@ -1,11 +1,11 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npx vite build",        // ✅ Direct execution (not npm run)
   "outputDirectory": "dist",
-  "installCommand": "npm install",
+  "installCommand": "npm ci",               // ✅ Clean install (CI standard)
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/index.html"          // ✅ SPA routing (fixes 404s)
     }
   ],
   "headers": [
